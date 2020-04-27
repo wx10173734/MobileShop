@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.MainActivity">
+<!--weight 只在线性布局中使用,当前使用的相对布局,无法使用weight,
+weight 简单理解就是百分比,该布局在整个线性布局中的百分比-->
+   <FrameLayout
+       android:id="@+id/main_fragment"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_weight="1"></FrameLayout>
+
+</RelativeLayout>

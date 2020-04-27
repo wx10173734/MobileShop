@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+<!--<TextView-->
+<!--    android:gravity="center"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    android:textSize="20sp"-->
+<!--    android:text="首页"/>-->
+<!--    <ImageView-->
+<!--        android:layout_width="300dp"-->
+<!--        android:layout_height="300dp"-->
+<!--        android:id="@+id/testLoadImg"/>-->
+
+<!--首页中的搜索框-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffad434e"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        >
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:paddingTop="3dp"
+            android:src="@drawable/logo"
+            android:id="@+id/logo"/>
+
+        <RelativeLayout
+            android:id="@+id/home_title_search"
+            android:layout_width="0dp"
+            android:layout_height="31dp"
+            android:layout_weight="4"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="8dp"
+            android:background="@drawable/home_top_search_background">
+
+
+            <ImageView
+                android:id="@+id/iv_search"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/icon_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:id="@+id/home_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="2dp"
+                android:layout_toRightOf="@id/iv_search"
+                android:background="#00000000"
+                android:gravity="center_vertical"
+                android:hint="搜索商品"
+                android:paddingBottom="2dp"
+                android:paddingRight="20dp"
+                android:paddingTop="2dp"
+                android:textColor="#ffb6b6b6"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+<!--首页中的商品列表-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <test.administrator.example.com.mobileshop.view.MyWebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </test.administrator.example.com.mobileshop.view.MyWebView>
+<!--需要添加一个自定义的WebView来显示-->
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</LinearLayout>
